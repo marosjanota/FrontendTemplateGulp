@@ -1,0 +1,138 @@
+﻿@use "import-mixins" as mixin;
+
+$alignTypes: (
+    "sb": space-between, 
+    "sa": space-around, 
+    "c": center, 
+    "fe": flex-end, 
+    "fs": flex-start
+);
+
+$directions: (
+    "b": margin-bottom,
+    "t": margin-top,
+    "l": margin-left,
+    "r": margin-right
+);
+
+$sizes: (
+  "xs": var(--gap-xs),  
+  "sm": var(--gap-sm),  
+  "md": var(--gap-md),  
+  "lg": var(--gap-lg),  
+  "xl": var(--gap-xl),  
+  "xxl": var(--gap-xxl)  
+);
+
+@mixin generate {
+    // display
+    .d {
+        &-b {
+            display: block;
+        }
+
+        &-ib {
+            display: inline-block;
+        }
+
+        &-f {
+            display: flex;
+        }
+
+        &-if {
+            display: inline-flex;
+        }
+
+        &-n {
+            display: none;
+        }
+    }
+    // flex direction
+    .fd {
+        &-r {
+            flex-direction: row;
+        }
+
+        &-c {
+            flex-direction: column;
+        }
+    }
+    // justifi content
+    .jc {
+        @each $type, $val in $alignTypes {
+            &-#{$type} {
+                justify-content: $val;
+            }
+        }
+    }
+    // align items
+    .ai {
+        @each $type, $val in $alignTypes {
+            &-#{$type} {
+                align-items: $val;
+            }
+        }
+    }
+    // margin
+    .m {
+        &l-a {
+            margin-left: auto;
+        }
+
+        &r-a {
+            margin-right: auto;
+        }
+
+        &-a {
+            margin: auto
+        }
+
+        @each $dir, $val in $directions {
+            @each $size, $val2 in $sizes {
+                &#{$dir}-#{$size} {
+                    #{$val}: #{$val2};
+                }
+            }
+        }
+    }
+
+    .ta {
+        &-c {
+            text-align: center;
+        }
+
+        &-l {
+            text-align: left;
+        }
+
+        &-r {
+            text-align: right;
+        }
+    }
+
+    .grid {
+        &-columns {
+            &-2 {
+                @include mixin.grid-create(2);
+            }
+
+            &-3 {
+                @include mixin.grid-create(3);
+            }
+        }
+
+        &-col {
+            &-1 {
+                grid-column: 1;
+            }
+
+            &-2 {
+                grid-column: 2;
+            }
+
+            &-3 {
+                grid-column: 3;
+            }
+        }
+    }
+}

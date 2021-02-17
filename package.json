@@ -1,0 +1,32 @@
+{
+  "name": "frontend-template-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build:css",
+    "compile": "gulp compile:scss",
+    "postcss": "gulp postcss:css",
+    "watch": "gulp watch:scss"
+  },
+  "author": "Maros Janota",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.32.7"
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "IE 11"
+    ],
+    "development": [
+      "defaults"
+    ]
+  }
+}

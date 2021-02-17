@@ -1,0 +1,14 @@
+﻿/*
+    Usage: name.mixin/$variable-name
+    Eg.: font.font-face
+*/
+
+@forward 'Mixins/colors' as color-*;
+@forward 'Mixins/flex' as flex-*;
+@forward 'Mixins/font' as font-*;
+@forward 'Mixins/gap' as gap-*;
+@forward 'Mixins/grid' as grid-*;
+@forward 'Mixins/images' as image-*;
+@forward 'Mixins/responsive' as responsive-*;
+@forward 'Mixins/text' as text-*; 
+@forward 'Mixins/triangle' as triangle-*;

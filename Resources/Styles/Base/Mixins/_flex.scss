@@ -1,0 +1,14 @@
+﻿@mixin set($direction: row, $justify: flex-start, $align-items: stretch, $align-content: normal, $inline: false, $wrap: nowrap) {
+    @if $inline == true {
+        display: inline-flex;
+    }
+    @else {
+        display: flex;
+    }
+    
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align-items;
+    align-content: $align-content;
+    flex-wrap: $wrap;
+}

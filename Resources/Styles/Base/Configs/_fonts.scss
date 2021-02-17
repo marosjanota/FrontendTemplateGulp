@@ -1,0 +1,48 @@
+﻿@use "colors";
+@use "../Mixins/font";
+
+
+$font-path: "/Resources/Fonts/Soleil";
+$font-name: Arial;
+
+$style: normal !default;
+$family: $font-name, sans-serif !default;
+$line-height: 1.5 !default;
+$weight: 300;
+
+$h1-size: 34px;
+$h1-weight: 600;
+$h1-color: var(--color-text);
+
+$h2-size: 26px;
+$h2-weight: 600;
+$h2-color: var(--color-text);
+
+$h3-size: 22px;
+$h3-weight: 300;
+$h3-color: var(--color-text);
+
+$h4-size: 19px;
+$h4-weight: 300;
+$h2-color: var(--color-text);
+
+$content-size: 16px;
+$content-weight: 400;
+
+$button-size: var(--color-text);
+$button-weight: 600;
+
+$label-size: 14px;
+$label-weight: 600;
+
+$nav-size: 18px;
+
+$nav-weight: 300;
+$nav-color: var(--color-text);
+
+
+//@mixin createFont {
+//    @include font.font-face($font-name, #{$font-path}-Light, 300);
+//    @include font.font-face($font-name, #{$font-path}-Regular, 400);
+//    @include font.font-face($font-name, #{$font-path}-Semibold, 600);
+//}

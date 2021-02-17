@@ -1,0 +1,24 @@
+﻿@use "./Resources/Styles/Base/Configs/sizes" as size;
+
+$breakpoints: (
+    "mobile": size.$width-mobile,
+    "tablet": size.$width-tablet,
+    "desktop-small": size.$width-desktop,
+    "desktop-large": size.$width-desktop-large,
+    "desktop-hd": size.$width-desktop-HD,
+    "desktop-full-hd": size.$width-desktop-full-HD,
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type == max {
+            $width: $width - 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

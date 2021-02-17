@@ -1,0 +1,20 @@
+﻿/*
+    Return negative number
+*/
+@function neg($num) {
+    @return 0 - $num;
+}
+
+/*
+    More usefull functions from sass:math
+    https://sass-lang.com/documentation/modules/math
+
+    max(1px, 4px); // 4px
+    min(1px, 4px); // 1px
+    round(4.9); // 5
+    floor(4.9); // 4
+    abs(10px); // 10px
+    percetage(0.2) // 20%
+    random() // 0.2821251858
+    is-unitless(100) // true
+*/

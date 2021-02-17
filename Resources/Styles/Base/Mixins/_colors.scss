@@ -1,0 +1,11 @@
+﻿@use "./Resources/Styles/Base/Configs/colors" as color;
+
+@mixin set($text: var(--color-text), $bg: var(--color-background)) {
+    @if $text != null {
+        color: $text;
+    }
+
+    @if $bg != null {
+        background-color: $bg;
+    }
+}

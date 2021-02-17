@@ -1,0 +1,29 @@
+﻿@mixin generate {
+    --color-primary: #DE831D;
+    --color-secondary: #3F93BF;
+    --color-info: #469BC7;
+    --color-success: #28A745;
+    --color-warning: #D6A100;
+    --color-error: #DC3545;
+    --color-background: #FFFFFF;
+    --color-background-sec: #EFF5F6;
+    --color-text: #333333;
+    --color-text-highlight: #FFFFFF;
+    --color-border: #7F7F7F;
+}
+
+@mixin generateDarkTheme {
+    .theme-dark {
+        --color-primary: #DE831D;
+        --color-secondary: #3F93BF;
+        --color-info: #469BC7;
+        --color-success: #28A745;
+        --color-warning: #D6A100;
+        --color-error: #DC3545;
+        --color-background: #333333;
+        --color-background-sec: #000000;
+        --color-text: #FFFFFF;
+        --color-text-highlight: #FFFFFF;
+        --color-border: #7F7F7F;
+    }
+}

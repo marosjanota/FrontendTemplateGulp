@@ -1,0 +1,11 @@
+﻿@use "Configs/colors";
+@use "Configs/sizes";
+
+@mixin generate {
+    :root {
+        @include colors.generate;
+        @include sizes.generate;
+    }
+
+    @include colors.generateDarkTheme;
+}

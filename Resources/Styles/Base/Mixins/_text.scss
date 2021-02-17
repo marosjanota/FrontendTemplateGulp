@@ -1,0 +1,38 @@
+﻿
+/*
+    Text that overflow will contains an ellipsis (...) at the end
+    Usage: @include mixins.text-overflow-hidden;
+    Usage: @include mixins.text-input-placeholder;
+*/
+
+@mixin truncate($max-width: none) {
+    @if $max-width != none {
+        max-width: $max-width;
+    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}

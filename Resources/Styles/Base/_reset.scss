@@ -1,0 +1,24 @@
+﻿@use "Configs/fonts";
+
+@mixin reset {
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: fonts.$family;
+        font-weight: fonts.$weight;
+        line-height: fonts.$line-height;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

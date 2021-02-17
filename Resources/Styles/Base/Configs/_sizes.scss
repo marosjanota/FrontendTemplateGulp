@@ -1,0 +1,19 @@
+﻿// All devices width for responsivity
+$width-mobile: 560px;
+$width-tablet: 768px;
+$width-desktop: 980px;
+$width-desktop-large: 1200px;
+$width-desktop-HD: 1440px;
+$width-desktop-full-HD: 1920px;
+
+@mixin generate {
+    --gap-xs: 0.125rem;
+    --gap-sm: 0.25rem;
+    --gap-md: 0.5rem;
+    --gap-lg: 1rem;
+    --gap-xl: 1.5rem;
+    --gap-xxl: 2rem;
+    --border-radius: 0px;
+    --border-radius-big: 8px;
+    --border-width: 1px;
+}

@@ -1,0 +1,17 @@
+﻿@use "sass:color";
+
+@function hover($color)
+{
+    @if(color.lightness($color) > 70%) {
+        @return color.scale($color, $lightness: -20%);
+    }
+    @return color.scale($color, $lightness: 20%);
+}
+
+@function darken($color) {
+    @return color.scale($color, $lightness: -20%);
+}
+
+@function lighten($color) {
+    @return color.scale($color, $lightness: 20%);
+}
